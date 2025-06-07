@@ -1,0 +1,85 @@
+############################################
+### SINGLE PLAYER MAGIC STATIC MODIFIERS ###
+############################################
+
+###################
+# RULER MODIFIERS #
+###################
+
+	# Blood of the Conquerer
+	spm_blood_of_the_conquerer = {
+		#AE
+		ae_impact = -0.60
+		#COMBAT
+		discipline = 0.025 
+		mercenary_discipline = 0.10 
+		land_morale = 0.25 
+		fire_damage = 0.25
+		shock_damage = 0.15 
+		shock_damage_received = -0.05
+		#MANPOWER
+		global_manpower_modifier = 0.10 
+		recover_army_morale_speed = 0.15
+		#CULTURE
+		#ECONOMIC
+		#RELIGIOUS
+		#picture = "spm_bloodline_blood_of_the_conquerer"
+	}
+
+	# Aggressive Expansion Reductions
+
+		# -10%
+
+		# -25%
+
+		# -50%
+
+# END RULER MODIFIERS
+
+####################
+# STATIC MODIFIERS #
+####################
+
+	# Monthly Mana
+	spm_monthly_mana = {
+		country_admin_power = 1500
+		country_diplomatic_power = 1500
+		country_military_power = 1500
+	}
+
+	# Manpower Modifier Increase - 10%
+	spm_manpower_increase_10 = {
+		global_manpower_modifier = 0.10
+	}
+
+	# Manpower Modifier Increase - 25%
+	spm_manpower_increase_25 = {
+		global_manpower_modifier = 0.25
+	}
+
+	# Manpower Modifier Increase - 50%
+	spm_manpower_increase_50 = {
+		global_manpower_modifier = 0.50
+	}
+
+	# Manpower Modifier Increase - 75%
+	spm_manpower_increase_75 = {
+		global_manpower_modifier = 0.75
+	}
+
+	# Manpower Modifier Increase - 100%
+	spm_manpower_increase_100 = {
+		global_manpower_modifier = 1
+	}
+
+	# Add Colonist
+
+	spm_add_colonist = {
+		colonists = 1 
+	}
+
+# END EVENT MODIFIERS
+
+#######
+# END #
+#######

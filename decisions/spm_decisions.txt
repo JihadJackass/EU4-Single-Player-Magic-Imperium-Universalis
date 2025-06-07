@@ -1,0 +1,22 @@
+country_decisions = {
+	# SPM Main Menu
+	spm_main_menu_decision = {
+		color = { 175 84 255 }
+		potential = {
+			ai = no
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			custom_tooltip = SPM_TT_MENU
+			hidden_effect = {
+				country_event = {
+					id = spm_event.1
+				}
+			}
+		}
+	}
+	
+}

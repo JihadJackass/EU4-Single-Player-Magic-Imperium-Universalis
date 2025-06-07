@@ -1,0 +1,893 @@
+namespace = spm_event
+
+# MAIN MENU
+
+country_event = {
+	id = spm_event.1
+	title = "spm_event.1.EVTNAME1"
+	desc = "spm_event.1.EVTDESC1"
+	picture = italicgfx_generals
+	
+	is_triggered_only = yes
+	
+	option = { # Mana Management Menu
+		name = "spm_event.1.EVTOPT1"
+		
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_MENU_TT_1
+		
+		hidden_effect = {
+			country_event = { id = spm_event.2 }
+		}
+	}
+	
+	option = { # Army Management Menu
+		name = "spm_event.1.EVTOPT2"
+		
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_MENU_TT_2
+		
+		hidden_effect = {
+			country_event = { id = spm_event.3 }
+		}
+	}
+	
+	option = { # Navy Management Menu
+		name = "spm_event.1.EVTOPT3"
+		
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_MENU_TT_3
+		
+		hidden_effect = {
+			country_event = { id = spm_event.4 }
+		}
+	}
+
+	option = { # Government Management Menu
+		name = "spm_event.1.EVTOPT4"
+		
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_MENU_TT_4
+		
+		hidden_effect = {
+			country_event = { id = spm_event.5 }
+		}
+	}
+
+	option = { # Ruler Management Menu
+		name = "spm_event.1.EVTOPT5"
+		
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_MENU_TT_5
+		
+		hidden_effect = {
+			country_event = { id = spm_event.6 }
+		}
+	}
+
+	option = { # Heir Management Menu
+		name = "spm_event.1.EVTOPT6"
+		
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_MENU_TT_6
+		
+		hidden_effect = {
+			country_event = { id = spm_event.7 }
+		}
+	}
+
+	option = { # Technology Management Menu
+		name = "spm_event.1.EVTOPT7"
+		
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_MENU_TT_7
+		
+		hidden_effect = {
+			country_event = { id = spm_event.8 }
+		}
+	}
+
+	option = { # Estates Management Menu
+		name = "spm_event.1.EVTOPT8"
+		
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_MENU_TT_8
+		
+		hidden_effect = {
+			country_event = { id = spm_event.9 }
+		}
+	}
+
+	option = { # Colonial Management Menu
+		name = "spm_event.1.EVTOPT9"
+		
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_MENU_TT_9
+		
+		hidden_effect = {
+			country_event = { id = spm_event.10 }
+		}
+	}
+
+	option = { # ZhuZXia Management Menu
+		name = "spm_event.1.EVTOPT10"
+		
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_MENU_TT_10
+		
+		hidden_effect = {
+			country_event = { id = spm_event.11 }
+		}
+	}
+	
+	option = { # Close
+		name = "spm_event.1.EVTOPT25"
+		
+		ai_chance = { factor = 0 }
+	}
+}
+
+# MANA MENU 
+
+country_event = {
+	id = spm_event.2
+	title = "spm_event.2.EVTNAME1"
+	desc = "spm_event.2.EVTDESC1"
+	picture = italicgfx_city
+	
+	is_triggered_only = yes
+	
+	option = { # Monthly Mana - Enable
+		name = "spm_event.2.EVTOPT1"
+		ai_chance = { factor = 0 }
+
+		trigger = {
+			NOT = { has_country_flag = spm_mana_monthly_currently_enabled }
+		}
+		
+		custom_tooltip = SPM_TT_MANA_ENABLE
+		
+		hidden_effect = { 
+			set_country_flag = spm_mana_monthly_currently_enabled
+			clr_country_flag = spm_mana_monthly_currently_disabled
+			hidden_effect = {
+				add_country_modifier = {
+					name = spm_monthly_mana
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	option = { # Monthly Mana - Disable
+		name = "spm_event.2.EVTOPT2"	
+		ai_chance = { factor = 0 }
+		trigger = {
+			has_country_flag = spm_mana_monthly_currently_enabled
+		}
+		
+		custom_tooltip = SPM_TT_MANA_DISABLE
+		
+		hidden_effect = { 
+			set_country_flag = spm_mana_monthly_currently_disabled
+			clr_country_flag = spm_mana_monthly_currently_enabled
+			remove_country_modifier = spm_monthly_mana
+		}
+	}
+	
+	option = { # Mana - 1000
+		name = "spm_event.2.EVTOPT3"
+
+		add_adm_power = 1000
+		add_dip_power = 1000
+		add_mil_power = 1000
+
+		ai_chance = { factor = 0 }
+	}
+
+	option = { # Mana - 2500
+		name = "spm_event.2.EVTOPT4"
+
+		add_adm_power = 2500
+		add_dip_power = 2500
+		add_mil_power = 2500
+
+		ai_chance = { factor = 0 }
+	}
+
+	option = { # Mana - 5000
+		name = "spm_event.2.EVTOPT5"
+
+		add_adm_power = 5000
+		add_dip_power = 5000
+		add_mil_power = 5000
+
+		ai_chance = { factor = 0 }
+	}
+
+	option = { # Mana - 10000
+		name = "spm_event.2.EVTOPT6"
+
+		add_adm_power = 10000
+		add_dip_power = 10000
+		add_mil_power = 10000
+
+		ai_chance = { factor = 0 }
+	}
+
+	option = { # Return to menu
+		name = "spm_event.2.EVTOPT25"
+
+		custom_tooltip = SPM_TT_RETURN_TO_MENU
+
+		hidden_effect = {
+			country_event = { id = spm_event.1 }
+		}
+
+		ai_chance = { factor = 0 }
+	}
+	
+	option = { # Close
+		name = "spm_event.2.EVTOPT26"
+
+		custom_tooltip = SPM_TT_CLOSE_SPM
+		
+		ai_chance = { factor = 0 }
+	}
+}
+
+# ARMY MENU
+
+country_event = {
+	id = spm_event.3
+	title = "spm_event.3.EVTNAME1"
+	desc = "spm_event.3.EVTDESC1"
+	picture = italicgfx_training
+	
+	is_triggered_only = yes
+	
+	option = { # Manpower Modifier Increase 10% - Enable
+		name = "spm_event.3.EVTOPT1"
+		ai_chance = { factor = 0 }
+
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = spm_manpower_increase_10_currently_enabled
+					has_country_flag = spm_manpower_increase_25_currently_enabled
+					has_country_flag = spm_manpower_increase_50_currently_enabled
+					has_country_flag = spm_manpower_increase_75_currently_enabled
+					has_country_flag = spm_manpower_increase_100_currently_enabled
+				} 
+			}
+		}
+
+		custom_tooltip = SPM_TT_MANPOWER_10_ENABLE
+		
+		hidden_effect = { 
+			set_country_flag = spm_manpower_increase_10_currently_enabled
+			hidden_effect = {
+				add_country_modifier = {
+					name = spm_manpower_increase_10
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	option = { # Manpower Modifier Increase 10% - Disable
+		name = "spm_event.3.EVTOPT2"	
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_TT_MANPOWER_10_DISABLE
+
+		trigger = {
+			has_country_flag = spm_manpower_increase_10_currently_enabled
+		}
+
+		clr_country_flag = spm_manpower_increase_10_currently_enabled
+		remove_country_modifier = spm_manpower_increase_10
+	}
+
+	option = { # Manpower Modifier Increase 25% - Enable
+		name = "spm_event.3.EVTOPT3"
+		ai_chance = { factor = 0 }
+
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = spm_manpower_increase_10_currently_enabled
+					has_country_flag = spm_manpower_increase_25_currently_enabled
+					has_country_flag = spm_manpower_increase_50_currently_enabled
+					has_country_flag = spm_manpower_increase_75_currently_enabled
+					has_country_flag = spm_manpower_increase_100_currently_enabled
+				} 
+			}
+		}
+
+		custom_tooltip = SPM_TT_MANPOWER_25_ENABLE
+		
+		hidden_effect = { 
+			set_country_flag = spm_manpower_increase_25_currently_enabled
+			hidden_effect = {
+				add_country_modifier = {
+					name = spm_manpower_increase_25
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	option = { # Manpower Modifier Increase 25% - Disable
+		name = "spm_event.3.EVTOPT4"	
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_TT_MANPOWER_25_DISABLE
+
+		trigger = {
+			has_country_flag = spm_manpower_increase_25_currently_enabled
+		}
+
+		clr_country_flag = spm_manpower_increase_25_currently_enabled
+		remove_country_modifier = spm_manpower_increase_25
+	}
+
+	option = { # Manpower Modifier Increase 50% - Enable
+		name = "spm_event.3.EVTOPT5"
+		ai_chance = { factor = 0 }
+
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = spm_manpower_increase_10_currently_enabled
+					has_country_flag = spm_manpower_increase_25_currently_enabled
+					has_country_flag = spm_manpower_increase_50_currently_enabled
+					has_country_flag = spm_manpower_increase_75_currently_enabled
+					has_country_flag = spm_manpower_increase_100_currently_enabled
+				} 
+			}
+		}
+
+		custom_tooltip = SPM_TT_MANPOWER_50_ENABLE
+		
+		hidden_effect = { 
+			set_country_flag = spm_manpower_increase_50_currently_enabled
+			hidden_effect = {
+				add_country_modifier = {
+					name = spm_manpower_increase_50
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	option = { # Manpower Modifier Increase 50% - Disable
+		name = "spm_event.3.EVTOPT6"	
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_TT_MANPOWER_50_DISABLE
+
+		trigger = {
+			has_country_flag = spm_manpower_increase_50_currently_enabled
+		}
+
+		clr_country_flag = spm_manpower_increase_50_currently_enabled
+		remove_country_modifier = spm_manpower_increase_50
+	}
+	
+	option = { # Manpower - 5000
+		name = "spm_event.3.EVTOPT11"
+		ai_chance = { factor = 0 }
+
+		add_manpower = 5
+	}
+
+	option = { # Manpower - 10000
+		name = "spm_event.3.EVTOPT12"
+		ai_chance = { factor = 0 }
+
+		add_manpower = 10
+	}
+
+	option = { # Manpower - 20000
+		name = "spm_event.3.EVTOPT13"
+		ai_chance = { factor = 0 }
+
+		add_manpower = 20
+	}
+
+	option = { # Manpower - 25000
+		name = "spm_event.3.EVTOPT14"
+		ai_chance = { factor = 0 }
+
+		add_manpower = 25
+	}
+
+	option = { # Manpower - 50000
+		name = "spm_event.3.EVTOPT15"
+		ai_chance = { factor = 0 }
+
+		add_manpower = 50
+	}
+
+	option = { # Manpower - 100000
+		name = "spm_event.3.EVTOPT16"
+		ai_chance = { factor = 0 }
+
+		add_manpower = 100
+	}
+
+	option = { # Return to menu
+		name = "spm_event.3.EVTOPT25"
+		ai_chance = { factor = 0 }
+
+		custom_tooltip = SPM_TT_RETURN_TO_MENU
+
+		hidden_effect = { country_event = { id = spm_event.1 } }
+	}
+	
+	option = { # Close
+		name = "spm_event.3.EVTOPT26"
+		
+		custom_tooltip = SPM_TT_CLOSE_SPM
+
+		ai_chance = { factor = 0 }
+	}
+}
+
+# NAVY MENU
+
+country_event = {
+	id = spm_event.4
+	title = "spm_event.4.EVTNAME1"
+	desc = "spm_event.4.EVTDESC1"
+	picture = navy
+	
+	is_triggered_only = yes
+	
+	option = { # Monthly Sailors - Enable
+		name = "spm_event.4.EVTOPT1"
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_TT_SAILORS_ENABLE
+	}
+
+	option = { # Return to menu
+		name = "spm_event.4.EVTOPT25"
+		ai_chance = { factor = 0 }
+
+		custom_tooltip = SPM_TT_RETURN_TO_MENU
+
+		hidden_effect = { country_event = { id = spm_event.1 } }
+	}
+	
+	option = { # Close
+		name = "spm_event.4.EVTOPT26"
+		
+		custom_tooltip = SPM_TT_CLOSE_SPM
+
+		ai_chance = { factor = 0 }
+	}
+}
+
+# GOVERNMENT MENU
+
+country_event = {
+	id = spm_event.5
+	title = "spm_event.5.EVTNAME1"
+	desc = "spm_event.5.EVTDESC1"
+	picture = italicgfx_senat
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = "spm_event.5.EVTOPT1"
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_TODO_WIP
+	}
+
+	option = { # Return to menu
+		name = "spm_event.5.EVTOPT25"
+		ai_chance = { factor = 0 }
+
+		custom_tooltip = SPM_TT_RETURN_TO_MENU
+
+		hidden_effect = { country_event = { id = spm_event.1 } }
+	}
+	
+	option = { # Close
+		name = "spm_event.5.EVTOPT26"
+		
+		custom_tooltip = SPM_TT_CLOSE_SPM
+
+		ai_chance = { factor = 0 }
+	}
+}
+
+# RULER MENU
+
+country_event = {
+	id = spm_event.6
+	title = "spm_event.6.EVTNAME1"
+	desc = "spm_event.6.EVTDESC1"
+	picture = alexander2
+	
+	is_triggered_only = yes
+	
+	option = { # 
+		name = "spm_event.6.EVTOPT1"
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_TODO_WIP
+	}
+
+	option = { # 
+		name = "spm_event.6.EVTOPT2"
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_TODO_WIP
+	}
+
+	option = { # 
+		name = "spm_event.6.EVTOPT3"
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_TODO_WIP
+	}
+
+	option = { # 
+		name = "spm_event.6.EVTOPT4"
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_TODO_WIP
+	}
+
+	option = { # 
+		name = "spm_event.6.EVTOPT5"
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_TODO_WIP
+	}
+
+	option = { # 
+		name = "spm_event.6.EVTOPT6"
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_TODO_WIP
+	}
+
+	option = { # 
+		name = "spm_event.6.EVTOPT7"
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_TODO_WIP
+	}
+
+	option = { # Add Blood of the Conquerer
+		name = "spm_event.6.EVTOPT8"
+		ai_chance = { factor = 0 }
+		
+		add_ruler_modifier = {
+			name = spm_blood_of_the_conquerer
+			desc = spm_blood_of_the_conquerer_desc
+			duration = -1
+		}
+	}
+
+	option = { # Add Blood of the Conquerer - General
+		name = "spm_event.6.EVTOPT9"
+		ai_chance = { factor = 0 }
+		
+		define_ruler_to_general = {
+			fire = 9
+			shock = 8
+			manuever = 13
+			siege = 10
+		}
+		add_ruler_modifier = { 
+			name = spm_blood_of_the_conquerer
+			duration = -1  
+			desc = spm_blood_of_the_conquerer_DESC
+		}
+	}
+
+	option = { # Return to menu
+		name = "spm_event.6.EVTOPT25"
+		ai_chance = { factor = 0 }
+
+		custom_tooltip = SPM_TT_RETURN_TO_MENU
+
+		hidden_effect = { country_event = { id = spm_event.1 } }
+	}
+	
+	option = { # Close
+		name = "spm_event.6.EVTOPT26"
+		
+		custom_tooltip = SPM_TT_CLOSE_SPM
+
+		ai_chance = { factor = 0 }
+	}
+}
+
+# HEIR MENU
+
+country_event = {
+	id = spm_event.7
+	title = "spm_event.7.EVTNAME1"
+	desc = "spm_event.7.EVTDESC1"
+	picture = egyptgfx_ruler
+	
+	is_triggered_only = yes
+	
+	option = { # 
+		name = "spm_event.7.EVTOPT1"
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_TODO_WIP
+		
+		hidden_effect = {
+			country_event = { id = spm_event.2 }
+		}
+	}
+
+	option = { # Return to menu
+		name = "spm_event.7.EVTOPT25"
+		ai_chance = { factor = 0 }
+
+		custom_tooltip = SPM_TT_RETURN_TO_MENU
+
+		hidden_effect = { country_event = { id = spm_event.1 } }
+	}
+	
+	option = { # Close
+		name = "spm_event.7.EVTOPT26"
+		
+		custom_tooltip = SPM_TT_CLOSE_SPM
+
+		ai_chance = { factor = 0 }
+	}
+}
+
+# TECHNOLOGY MENU
+
+country_event = {
+	id = spm_event.8
+	title = "spm_event.8.EVTNAME1"
+	desc = "spm_event.8.EVTDESC1"
+	picture = culture
+	
+	is_triggered_only = yes
+	
+	option = { # Add 1 of each Technology Tech
+		name = "spm_event.8.EVTOPT1"
+		ai_chance = { factor = 0 }
+		
+		add_adm_tech = 1
+		add_dip_tech = 1
+		add_mil_tech = 1
+	}
+
+	option = { # Add 1 Admin Tech
+		name = "spm_event.8.EVTOPT2"
+		ai_chance = { factor = 0 }
+		
+		add_adm_tech = 1
+	}
+
+	option = { # Add 1 Diplomatic Tech
+		name = "spm_event.8.EVTOPT3"
+		ai_chance = { factor = 0 }
+		
+		add_dip_tech = 1
+	}
+
+	option = { # Add 1 Military Tech
+		name = "spm_event.8.EVTOPT4"
+		ai_chance = { factor = 0 }
+		
+		add_mil_tech = 1
+	}
+
+	option = { # Return to menu
+		name = "spm_event.8.EVTOPT25"
+		ai_chance = { factor = 0 }
+
+		custom_tooltip = SPM_TT_RETURN_TO_MENU
+
+		hidden_effect = { country_event = { id = spm_event.1 } }
+	}
+	
+	option = { # Close
+		name = "spm_event.8.EVTOPT26"
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_TT_CLOSE_SPM
+	}
+}
+
+# ESTATES MENU
+
+country_event = {
+	id = spm_event.9
+	title = "spm_event.9.EVTNAME1"
+	desc = "spm_event.9.EVTDESC1"
+	picture = italicgfx_senat_conflict
+	
+	is_triggered_only = yes
+	
+	option = { # 
+		name = "spm_event.9.EVTOPT1"
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_TODO_WIP
+		
+		hidden_effect = {
+			country_event = { id = spm_event.2 }
+		}
+	}
+
+	option = { # Return to menu
+		name = "spm_event.9.EVTOPT25"
+		ai_chance = { factor = 0 }
+
+		custom_tooltip = SPM_TT_RETURN_TO_MENU
+
+		hidden_effect = { country_event = { id = spm_event.1 } }
+	}
+	
+	option = { # Close
+		name = "spm_event.9.EVTOPT26"
+		ai_chance = { factor = 0 }
+		
+		custom_tooltip = SPM_TT_CLOSE_SPM
+	}
+}
+
+# COLONIAL MENU
+
+country_event = {
+	id = spm_event.10
+	title = "spm_event.10.EVTNAME1"
+	desc = "spm_event.10.EVTDESC1"
+	picture = italicgfx_construction
+	
+	is_triggered_only = yes
+	
+	option = { # Add Colonist
+		name = "spm_event.10.EVTOPT1"
+		
+		add_country_modifier = {
+			name = spm_add_colonist
+			duration = -1
+		}
+	}
+
+	option = { # Add Global Expansion Increase - 20%
+		name = "spm_event.10.EVTOPT2"
+		
+		custom_tooltip = SPM_TODO_WIP
+	}
+
+	option = { # Return to menu
+		name = "spm_event.10.EVTOPT25"
+		ai_chance = { factor = 0 }
+
+		custom_tooltip = SPM_TT_RETURN_TO_MENU
+
+		hidden_effect = { country_event = { id = spm_event.1 } }
+	}
+	
+	option = { # Close
+		name = "spm_event.10.EVTOPT26"
+		
+		custom_tooltip = SPM_TT_CLOSE_SPM
+
+		ai_chance = { factor = 0 }
+	}
+}
+
+# ZHU XIA MENU
+
+country_event = {
+	id = spm_event.11
+	title = "spm_event.11.EVTNAME1"
+	desc = "spm_event.11.EVTDESC1"
+	picture = asiangfx_ruler
+	
+	is_triggered_only = yes
+	
+	option = { # Increase ZhuXia Influence
+		name = "spm_event.11.EVTOPT1"
+		ai_chance = { factor = 0 }
+		
+		#custom_tooltip = SPM_ETT_1
+		
+		add_imperial_influence = 10
+	}
+
+	option = { # Lower ZhuXia Influence
+		name = "spm_event.11.EVTOPT2"
+		ai_chance = { factor = 0 }
+		
+		#custom_tooltip = SPM_ETT_1
+		
+		add_imperial_influence = -10
+	}
+
+	option = { # Become an Elector
+		name = "spm_event.11.EVTOPT3"
+		ai_chance = { factor = 0 }
+		
+		#custom_tooltip = SPM_ETT_1
+		
+		elector = yes
+	}
+
+	option = { # Join ZhuXia
+		name = "spm_event.11.EVTOPT4"
+		ai_chance = { factor = 0 }
+		
+		#custom_tooltip = SPM_ETT_1
+		
+		ROOT = { set_in_empire = yes }
+	}
+
+	option = { # Add Subjects to ZhuXia
+		name = "spm_event.11.EVTOPT5"
+		ai_chance = { factor = 0 }
+		
+		#custom_tooltip = SPM_ETT_1
+		
+		if = {
+			limit = {
+				is_subject_of = ROOT
+			}
+			set_in_empire = yes
+		}
+	}
+
+	option = { # Add Subjects as Electors
+		name = "spm_event.11.EVTOPT6"
+		ai_chance = { factor = 0 }
+		
+		#custom_tooltip = SPM_ETT_1
+		
+		if = {
+			limit = {
+				is_subject_of = ROOT
+			}
+			every_subject_country = {
+				elector = yes
+			}
+		}
+	}
+
+	option = { # Return to menu
+		name = "spm_event.11.EVTOPT25"
+		ai_chance = { factor = 0 }
+
+		custom_tooltip = SPM_TT_RETURN_TO_MENU
+
+		hidden_effect = { country_event = { id = spm_event.1 } }
+	}
+	
+	option = { # Close
+		name = "spm_event.11.EVTOPT26"
+		
+		custom_tooltip = SPM_TT_CLOSE_SPM
+
+		ai_chance = { factor = 0 }
+	}
+}
+

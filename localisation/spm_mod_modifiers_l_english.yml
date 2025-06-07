@@ -1,0 +1,26 @@
+﻿l_english:
+    ###################
+    # EVENT MODIFIERS #
+    ###################
+
+      # NONE CURRENTLY
+
+   #####################
+   # COUNTRY MODIFIERS #
+   #####################
+
+      spm_monthly_mana: "Monthly Mana"
+      spm_manpower_increase_10: "Manpower Modifier 10% Increase"
+      spm_manpower_increase_25: "Manpower Modifier 25% Increase"
+      spm_manpower_increase_50: "Manpower Modifier 50% Increase"
+      spm_monthly_sailors: "Monthly Sailors"
+      spm_add_colonist: "New Colonial Policy (+1)"
+
+   ###################
+   # RULER MODIFIERS #
+   ###################
+
+      spm_blood_of_the_conquerer: "Blood of the Conquerer"
+      spm_blood_of_the_conquerer_desc: "TODO _desc"
+      desc_spm_blood_of_the_conquerer: "TODO desc_"
+ 

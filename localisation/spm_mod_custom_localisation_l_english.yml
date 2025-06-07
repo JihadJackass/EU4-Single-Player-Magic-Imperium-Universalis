@@ -1,0 +1,37 @@
+﻿l_english:
+ SPM_TT_MENU: "Open Single Player Magic | Main Menu"
+ SPM_TT_RETURN_TO_MENU: "Return to Single Player Magic | Main Menu"
+ SPM_TT_CLOSE_SPM: "Close Single Player Magic"
+ SPM_TODO_WIP: "§YTODO§!: §GWork-in-progress§! / §TI'm lazy§! / §gNot enough time§!"
+
+ SPM_MENU_TT_1: "Open Mana Management Menu"
+ SPM_MENU_TT_2: "Open Army Management Menu"
+ SPM_MENU_TT_3: "Open Navy Management Menu"
+ SPM_MENU_TT_4: "Open Government Management Menu"
+ SPM_MENU_TT_5: "Open Ruler Management Menu"
+ SPM_MENU_TT_6: "Open Heir Management Menu"
+ SPM_MENU_TT_7: "Open Technology Management Menu"
+ SPM_MENU_TT_8: "Open Estates Management Menu"
+ SPM_MENU_TT_9: "Open Colonial Management Menu"
+ SPM_MENU_TT_10: "Open ZhuZXia Management Menu"
+
+ SPM_TT_MANA_ENABLE: "Monthly Mana - §GEnable§!"
+ SPM_TT_MANA_DISABLE: "Monthly Mana - §RDisable§!"
+
+ SPM_TT_MANPOWER_10_ENABLE: "Manpower Modifier Increase 10% - §GEnable§!"
+ SPM_TT_MANPOWER_10_DISABLE: "Manpower Modifier Increase 10% - §RDisable§!"
+ SPM_TT_MANPOWER_25_ENABLE: "Manpower Modifier Increase 25% - §GEnable§!"
+ SPM_TT_MANPOWER_25_DISABLE: "Manpower Modifier Increase 25% - §RDisable§!"
+ SPM_TT_MANPOWER_50_ENABLE: "Manpower Modifier Increase 50% - §GEnable§!"
+ SPM_TT_MANPOWER_50_DISABLE: "Manpower Modifier Increase 50% - §RDisable§!"
+ SPM_TT_MANPOWER_75_ENABLE: "Manpower Modifier Increase 75% - §GEnable§!"
+ SPM_TT_MANPOWER_75_DISABLE: "Manpower Modifier Increase 75% - §RDisable§!"
+ SPM_TT_MANPOWER_100_ENABLE: "Manpower Modifier Increase 100% - §GEnable§!"
+ SPM_TT_MANPOWER_100_DISABLE: "Manpower Modifier Increase 100% - §RDisable§!"
+
+ SPM_TT_SAILORS_ENABLE: "Monthly Sailors - §GEnable§!"
+ SPM_TT_SAILORS_DISABLE: "Monthly Sailors - §RDisable§!"
+ 
+ string_minimum_value_yes: "£yes£"
+ string_minimum_value_no: "£no£"
+ 
